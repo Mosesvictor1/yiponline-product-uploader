@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "yiponline-product-app",
-    "slug": "yiponline-product-app",
+    "name": "yiponline-product-Uploader",
+    "slug": "yiponline-product-Uploader",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "yiponlineproductapp",
+    "scheme": "yiponlineproductuploader",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
