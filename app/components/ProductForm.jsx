@@ -86,36 +86,48 @@ const ProductForm = () => {
     >
       <Text className="text-xl font-bold mb-4">Add New Product</Text>
 
-      <TextInput
-        className="border border-gray-300 rounded-lg p-2 mb-4"
-        placeholder="Product Name"
-        value={name}
-        onChangeText={setName}
-      />
+      <View className="mb-4">
+        <Text className="text-gray-700 font-medium mb-1">Product Name</Text>
+        <TextInput
+          className="border border-gray-300 rounded-lg p-2"
+          placeholder="Enter product name"
+          value={name}
+          onChangeText={setName}
+        />
+      </View>
 
-      <TextInput
-        className="border border-gray-300 rounded-lg p-2 mb-4"
-        placeholder="Price"
-        value={price}
-        onChangeText={setPrice}
-        keyboardType="numeric"
-      />
+      <View className="mb-4">
+        <Text className="text-gray-700 font-medium mb-1">Price (₦)</Text>
+        <TextInput
+          className="border border-gray-300 rounded-lg p-2"
+          placeholder="Enter product price"
+          value={price}
+          onChangeText={setPrice}
+          keyboardType="numeric"
+        />
+      </View>
 
-      <TouchableOpacity
-        className="bg-blue-500 p-2 rounded-lg mb-4"
-        onPress={pickImage}
-      >
-        <Text className="text-white text-center">
-          {photo ? "Change Photo" : "Select Photo"}
-        </Text>
-      </TouchableOpacity>
+      <View className="mb-4">
+        <Text className="text-gray-700 font-medium mb-1">Product Photo</Text>
+        <TouchableOpacity
+          className="bg-blue-500 p-2 rounded-lg"
+          onPress={pickImage}
+        >
+          <Text className="text-white text-center">
+            {photo ? "Change Photo" : "Select Photo"}
+          </Text>
+        </TouchableOpacity>
+      </View>
 
       {photo && (
-        <Image
-          source={{ uri: photo }}
-          className="w-full h-40 rounded-lg mb-4"
-          resizeMode="cover"
-        />
+        <View className="mb-4">
+          <Text className="text-gray-700 font-medium mb-1">Preview</Text>
+          <Image
+            source={{ uri: photo }}
+            className="w-full h-40 rounded-lg"
+            resizeMode="cover"
+          />
+        </View>
       )}
 
       <TouchableOpacity
